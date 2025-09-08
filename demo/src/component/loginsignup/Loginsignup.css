@@ -1,0 +1,137 @@
+/* Main app theme colors */
+:root {
+  --main-bg: #232946;
+  --card-bg: #393e6e;
+  --accent: #eebbc3;
+  --text: #fff;
+  --input-bg: #232946;
+  --input-border: #eebbc3;
+}
+
+.body-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #232946 0%, #393e6e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column ;
+    margin: auto ;
+    margin-top: 120px ;
+    width: 400px ;
+    background: var(--card-bg);
+    color: var(--text);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(35,41,70,0.15);
+    padding: 32px 32px 24px 32px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 9px;
+    width: 100% ;
+    margin-top: 0;
+}
+.text{
+   color: var(--accent);
+   font-size: 2.2rem;
+   font-weight: 700;
+   letter-spacing: 1px;
+}
+.underline{
+    width: 61px;
+    height: 5px ;
+    background: var(--accent);
+    border-radius: 9px;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background: var(--input-bg);
+    border-radius: 8px;
+    border: 1.5px solid var(--input-border);
+    margin-bottom: 8px;
+}
+.input img{
+    margin: 0px 18px;
+    width: 22px;
+    height: 22px;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 1rem;
+    padding-right: 18px;
+} 
+.forgot-password{
+    margin-top: 12px;
+    color: #b8b8b8;
+    font-size: 0.98rem;
+    text-align: right;
+}
+.forgot-password span{
+    color: var(--accent);
+    cursor: pointer;
+}
+.submit-container{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 32px 0 0 0;
+    align-items: center;
+}
+.submit{
+    width: 100%;
+    max-width: 220px;
+    height: 48px;
+    color: var(--text);
+    background: var(--accent);
+    border: none;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit.gray{
+    background: #eaeaea;
+    color: #393e6e;
+}
+.submit:hover:not(.gray) {
+    background: #fff;
+    color: var(--card-bg);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95vw;
+    padding: 18px 4vw 18px 4vw;
+  }
+  .input {
+    height: 42px;
+  }
+  .submit {
+    max-width: 100%;
+  }
+}
